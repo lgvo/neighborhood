@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <title></title>
+    <script async src="js/main.js" type="application/javascript"></script>
+    <style>
+        #places-search {
+            display: none
+        }
+
+        .map {
+            height: 100%;
+            margin: 0;
+            padding: 0
+        }</style>
+</head>
+<body>
+<div id="places-search">
+    <form class="form-inline" role="form">
+        <div class="form-group">
+            <input class="form-control" id="searchInput" type="text" placeholder="Search places here!!"/>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary">Search</button>
+        </div>
+    </form>
+</div>
+<div id="map-canvas" class="map">
+</div>
+</body>
+</html>
