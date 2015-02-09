@@ -1,6 +1,6 @@
 var main = (function () {
 
-    var jsModules = ['js/maps.js', 'js/view.js', 'js/model.js'];
+    var jsModules = ['js/model.js', 'js/maps.js', 'js/view.js'];
     var cssModules = ['https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css', 'css/main.css'];
 
     var queues = {};

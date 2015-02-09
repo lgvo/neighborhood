@@ -1,6 +1,13 @@
 (function () {
+    var iconsBase = '';
+    var icons = {
+        restaurant: iconsBase,
+        cafe: iconsBase
+    };
+
+
     var module = Object.create(main);
-    module.name = 'model';
+    module.name = 'view';
     module.init = function () {
 
     };
@@ -10,5 +17,5 @@
         console.log(this.name + ' << mapLoaded')
     });
 
-    main.register('model', module);
+    main.register('view', module);
 })();
