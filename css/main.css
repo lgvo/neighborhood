@@ -5,9 +5,16 @@ html, body, .map {
 }
 
 #places-search {
-    height: 100%;
     margin-top: 3em;
     margin-left: 8em;
     position: absolute;
+    z-index: 1;
+}
+
+#places-list {
+    height: 100%;
+    width: 20%;
+    position: absolute;
+    right: 0;
     z-index: 1;
 }

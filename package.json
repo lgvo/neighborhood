@@ -1,0 +1,25 @@
+{
+  "name": "neighborhood",
+  "version": "0.0.1",
+  "description": "Udacity FrontEnd Nanodegree Project",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "~3.9.0"
+  },
+  "devDependencies": {
+    "gulp": "~3.9.0",
+    "browser-sync": "~2.7.13"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lgvo/neighborhood.git"
+  },
+  "author": "Luis Oliveira",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/lgvo/neighborhood/issues"
+  }
+}

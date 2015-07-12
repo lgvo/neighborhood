@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-min.js"></script>
     <script async src="js/main.js" type="application/javascript"></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?v=3.9&callback=mapsCallback&libraries=places" type="application/javascript"></script>
     <style>
         #places-search {
+            display: none
+        }
+
+        #places-list {
             display: none
         }
 
@@ -18,20 +26,26 @@
 </head>
 <body>
 <div id="places-search">
-    <form class="form-inline" role="form">
-        <div class="form-group">
-            <input class="form-control" id="searchInput" type="text" placeholder="Search places here!!"/>
-        </div>
-        <div class="form-group">
-            <button class="btn btn-primary">Search</button>
+    <form class="form-inline" role="form" data-bind="submit: search">
+        <div class="input-group">
+            <input data-bind="textInput: query" class="form-control input-lg" id="searchInput" type="text" placeholder="Search places here!!"/>
+            <span class="input-group-btn">
+                <button class="btn btn-primary btn-lg">
+                    <span class="glyphicon glyphicon-search"></span>
+                </button>
+            </span>
         </div>
     </form>
 </div>
 <div id="types-list">
 
 </div>
-<div id="places-list">
-
+<div data-bind="visible: places().length > 0" id="places-list" class="navbar navbar-inverse">
+    <ul class="nav" data-bind="foreach: places">
+        <li data-bind="visible: visible, click: select">
+            <a href="" data-bind="text: name"></a>
+        </li>
+    </ul>
 </div>
 <div id="map-canvas" class="map">
 </div>
